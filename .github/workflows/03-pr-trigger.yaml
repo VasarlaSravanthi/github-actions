@@ -1,15 +1,29 @@
-name: PR-Trigger
+# name: PR-Trigger
+# # triggers
+# on: 
+#   pull-request:
+#     types: [opened, reopened]
+# # stages
+# jobs:
+#   my-job: #stage
+#     runs-on: ubuntu-latest # agent This is github hosted runner
+#     steps:
+#      # this give us data of full even triggeres
+#       - name: event triggered data #steps1
+#         run: |
+#           cat "$GITHUB_EVENT_PATH"
+#           echo "The action was: $(jq -r '.action' "$GITHUB_EVENT_PATH")"
+
+name: PR trigger
 # triggers
 on: 
-  pull-request:
+  pull_request:
     types: [opened, reopened]
-# stages
-jobs:
-  my-job: #stage
-    runs-on: ubuntu-latest # agent This is github hosted runner
+jobs: # stages
+  my-job: # stage
+    runs-on: ubuntu-latest # agent, ubuntu-latest is github hosted runner
     steps:
-     # this give us data of full even triggeres
-      - name: event triggered data #steps1
+      - name: event triggered data
         run: |
           cat "$GITHUB_EVENT_PATH"
           echo "The action was: $(jq -r '.action' "$GITHUB_EVENT_PATH")"
