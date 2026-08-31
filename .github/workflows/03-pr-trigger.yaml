@@ -1,8 +1,8 @@
 name: PR-Trigger
 # triggers
 on: 
- pull-request:
-  types: [opened, reopened]
+  pull-request:
+    types: [opened, reopened]
 # stages
 jobs:
   my-job: #stage
