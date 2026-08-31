@@ -10,9 +10,8 @@ jobs:
     steps:
      # this give us data of full even triggeres
       - name: event triggered data #step
-        run: run: |
+        run: |
           cat "$GITHUB_EVENT_PATH"
           echo "The action was: $(jq -r '.action' "$GITHUB_EVENT_PATH")"
 
-      - name: my-step -2 #step
-        run: echo "Hello Githubaction!"
+  
