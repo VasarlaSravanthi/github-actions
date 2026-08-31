@@ -8,6 +8,7 @@ jobs:
   my-job: #stage
     runs-on: ubuntu-latest # agent This is github hosted runner
     steps:
+     # this give us data of full even triggeres
       - name: event triggered data #step
         run: run: |
           cat "$GITHUB_EVENT_PATH"
